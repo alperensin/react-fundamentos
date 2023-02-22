@@ -2,5 +2,14 @@
   "name": "react-fundamentos",
   "version": "1.0.0",
   "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
   "license": "MIT"
+  }
 }
