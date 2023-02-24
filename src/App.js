@@ -23,6 +23,10 @@ function App() {
     ]);
   }
 
+  function handleRemovePost(postId) {
+    setPosts((prevState) => prevState.filter(({ id }) => id !== postId));
+  }
+
   return (
     <>
       <Header>
@@ -34,7 +38,12 @@ function App() {
       <hr />
 
       {posts.map(({ id, title, subtitle, likes }) => (
-        <Post key={id} post={{ title, subtitle }} likes={likes} />
+        <Post
+          key={id}
+          onRemove={handleRemovePost}
+          post={{ id, title, subtitle }}
+          likes={likes}
+        />
       ))}
     </>
   );
