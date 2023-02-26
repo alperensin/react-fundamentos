@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import PostHeader from "./PostHeader";
 import styles from "./Post.scss";
+import * as S from "./styles";
 
 export default function Post(props) {
   return (
@@ -14,10 +15,9 @@ export default function Post(props) {
           read: props.post.read,
         }}
       />
-      <br />
-      <small>{props.post.subtitle}</small>
-      <br />
-      Likes: {props.post.likes}
+
+      <S.Subtitle>{props.post.subtitle}</S.Subtitle>
+      <S.Likes>Likes: {props.post.likes}</S.Likes>
     </article>
   );
 }
