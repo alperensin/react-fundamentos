@@ -1,9 +1,11 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 export default createGlobalStyle`
-  body {
-    background: #222;
-    font-family: sans-serif;
-    color: #fff;
-  }
+  ${({ theme: { backgroundColor, textColor } }) => css`
+    body {
+      background: ${backgroundColor};
+      color: ${textColor};
+      font-family: sans-serif;
+    }
+  `}
 `;
