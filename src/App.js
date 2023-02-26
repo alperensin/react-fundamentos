@@ -3,6 +3,7 @@ import Button from "./Button";
 import Header from "./Header";
 import Post from "./Post";
 import { ThemeProvider } from "./ThemeContext";
+import styles from "./App.css";
 
 function App() {
   const [posts, setPosts] = useState([
@@ -49,7 +50,7 @@ function App() {
   return (
     <ThemeProvider>
       <Header>
-        <h2>
+        <h2 className={styles.title}>
           Posts da semana <Button onClick={handleRefresh}>Atualizar</Button>
         </h2>
       </Header>
