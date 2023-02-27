@@ -1,14 +1,14 @@
 import React from "react";
 
 import Header from "../Header";
-import PostsList from "../PostsList";
 import Footer from "../Footer";
+import Routes from "../../Routes";
 
 export default function Layout({ onToggleTheme, selectedTheme }) {
   return (
     <>
       <Header selectedTheme={selectedTheme} onToggleTheme={onToggleTheme} />
-      <PostsList />
+      <Routes />
       <Footer selectedTheme={selectedTheme} onToggleTheme={onToggleTheme} />
     </>
   );
