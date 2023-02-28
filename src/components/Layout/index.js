@@ -15,7 +15,16 @@ export default function Layout({ onToggleTheme, selectedTheme }) {
         <Link to="/posts">Posts</Link>
         <Link to="/posts/123456">Post</Link>
       </Nav>
-      <Routes />
+      <div
+        style={{
+          height: "calc(100vh - 276px)",
+          overflow: "hidden",
+          overflowY: "scroll",
+          position: "relative",
+        }}
+      >
+        <Routes />
+      </div>
       <Footer selectedTheme={selectedTheme} onToggleTheme={onToggleTheme} />
     </BrowserRouter>
   );

@@ -8,4 +8,8 @@ export default createGlobalStyle`
       font-family: sans-serif;
     }
   `}
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
